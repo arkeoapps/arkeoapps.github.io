@@ -1,62 +1,207 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Till - 개인정보처리방침</title>
-    <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 680px; margin: 40px auto; padding: 0 20px; color: #333; line-height: 1.7; }
-        h1 { font-size: 1.6em; border-bottom: 1px solid #e0e0e0; padding-bottom: 12px; }
-        h2 { font-size: 1.15em; margin-top: 28px; color: #111; }
-        p, li { font-size: 0.95em; }
-        .updated { color: #888; font-size: 0.85em; }
-        table { border-collapse: collapse; width: 100%; margin: 12px 0; }
-        th, td { border: 1px solid #e0e0e0; padding: 8px 12px; text-align: left; font-size: 0.9em; }
-        th { background: #f5f5f5; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Till - Privacy Policy</title>
+  <style>
+    :root {
+      --bg: #1A1D23;
+      --surface: #23272F;
+      --teal: #5AC8C8;
+      --teal-dim: rgba(90,200,200,0.15);
+      --text: #E8EAED;
+      --muted: #9AA0A6;
+      --border: rgba(90,200,200,0.2);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+    .dot-grid {
+      position: fixed;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(90,200,200,0.06) 1px, transparent 1px);
+      background-size: 32px 32px;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 60px 24px 80px;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .app-icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 18px;
+      box-shadow: 0 4px 24px rgba(90,200,200,0.2);
+      margin-bottom: 16px;
+    }
+    .brand {
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 8px;
+    }
+    h1 {
+      font-family: 'SF Pro Display', -apple-system, sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 20px;
+    }
+    .card h2 {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--teal);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .card h2 .icon {
+      width: 24px;
+      height: 24px;
+      background: var(--teal-dim);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+    }
+    .card p, .card li {
+      color: var(--muted);
+      font-size: 15px;
+      margin-bottom: 12px;
+    }
+    .card ul {
+      padding-left: 20px;
+    }
+    .card li {
+      margin-bottom: 8px;
+    }
+    .highlight {
+      background: var(--teal-dim);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin: 20px 0;
+      text-align: center;
+    }
+    .highlight p {
+      color: var(--teal);
+      font-weight: 600;
+      font-size: 16px;
+      margin: 0;
+    }
+    .nav-links {
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+    }
+    .nav-links a {
+      color: var(--teal);
+      text-decoration: none;
+      font-size: 14px;
+      margin: 0 16px;
+      transition: opacity 0.2s;
+    }
+    .nav-links a:hover { opacity: 0.7; }
+    .footer {
+      text-align: center;
+      margin-top: 32px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+  </style>
 </head>
 <body>
-    <h1>Till 개인정보처리방침</h1>
-    <p class="updated">최종 업데이트: 2026년 3월 9일</p>
+  <div class="dot-grid"></div>
+  <div class="container">
+    <div class="header">
+      <img src="app-icon.png" alt="Till App Icon" class="app-icon">
+      <div class="brand">Arkeo Apps</div>
+      <h1>Privacy Policy</h1>
+      <p class="subtitle">Last updated: March 11, 2026</p>
+    </div>
 
-    <h2>1. 개요</h2>
-    <p>Arkeo Apps(이하 "개발자")는 Till 앱(이하 "앱") 사용자의 개인정보를 소중히 여기며, 관련 법률에 따라 개인정보를 보호하기 위해 최선을 다합니다.</p>
+    <div class="highlight">
+      <p>Till does not collect, store, or transmit any personal data.</p>
+    </div>
 
-    <h2>2. 수집하는 정보</h2>
-    <p><strong>앱은 어떠한 개인정보도 수집하지 않습니다.</strong></p>
-    <p>구체적으로:</p>
-    <ul>
-        <li>사용자가 생성한 이벤트 데이터는 기기 내에만 저장되며, 외부 서버로 전송되지 않습니다.</li>
-        <li>분석(Analytics), 광고, 사용자 추적 도구를 사용하지 않습니다.</li>
-        <li>계정 생성이나 로그인을 요구하지 않습니다.</li>
-    </ul>
+    <div class="card">
+      <h2><span class="icon">1</span> Information We Collect</h2>
+      <p>Till is designed with your privacy in mind. We do <strong style="color:var(--text)">not</strong> collect any personal information.</p>
+      <ul>
+        <li>No account registration required</li>
+        <li>No analytics or tracking SDKs</li>
+        <li>No advertising identifiers</li>
+        <li>No server-side data storage</li>
+      </ul>
+    </div>
 
-    <h2>3. 데이터 저장</h2>
-    <table>
-        <tr><th>데이터</th><th>저장 위치</th><th>용도</th></tr>
-        <tr><td>이벤트 (제목, 날짜, 카테고리)</td><td>기기 내 (SwiftData)</td><td>앱 핵심 기능</td></tr>
-        <tr><td>구매 상태</td><td>기기 내 (UserDefaults)</td><td>Pro 기능 잠금 해제</td></tr>
-        <tr><td>테마 설정</td><td>기기 내 (UserDefaults)</td><td>사용자 환경 설정</td></tr>
-        <tr><td>위젯 데이터</td><td>기기 내 (App Group)</td><td>위젯 표시</td></tr>
-    </table>
+    <div class="card">
+      <h2><span class="icon">2</span> Data Storage</h2>
+      <p>All event data (titles, dates, colors, categories) is stored <strong style="color:var(--text)">locally on your device</strong> using Apple's SwiftData framework.</p>
+      <p>If you enable iCloud sync in a future update, data will be stored in your personal iCloud account under Apple's privacy policies. We never have access to your iCloud data.</p>
+    </div>
 
-    <h2>4. 제3자 서비스</h2>
-    <ul>
-        <li><strong>Apple StoreKit</strong>: 인앱 구매 처리에 사용됩니다. 결제 정보는 Apple이 직접 처리하며, 개발자는 접근할 수 없습니다.</li>
-        <li>그 외 제3자 SDK나 서비스를 사용하지 않습니다.</li>
-    </ul>
+    <div class="card">
+      <h2><span class="icon">3</span> Third-Party Services</h2>
+      <p>Till does not integrate any third-party analytics, advertising, or data collection services.</p>
+      <p>The app may connect to the App Store for in-app purchases (Till Pro). These transactions are handled entirely by Apple.</p>
+    </div>
 
-    <h2>5. 아동 개인정보</h2>
-    <p>앱은 13세 미만 아동의 개인정보를 의도적으로 수집하지 않습니다. 앱은 개인정보를 수집하지 않으므로 연령에 관계없이 안전하게 사용할 수 있습니다.</p>
+    <div class="card">
+      <h2><span class="icon">4</span> Children's Privacy</h2>
+      <p>Till does not knowingly collect any information from children. The app is safe for users of all ages.</p>
+    </div>
 
-    <h2>6. 데이터 삭제</h2>
-    <p>앱을 삭제하면 기기에 저장된 모든 데이터가 자동으로 삭제됩니다. 별도의 삭제 요청이 필요하지 않습니다.</p>
+    <div class="card">
+      <h2><span class="icon">5</span> Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time. Any changes will be reflected on this page with an updated revision date.</p>
+    </div>
 
-    <h2>7. 방침 변경</h2>
-    <p>본 개인정보처리방침은 필요에 따라 변경될 수 있으며, 변경 사항은 본 페이지에 게시됩니다.</p>
+    <div class="card">
+      <h2><span class="icon">6</span> Contact Us</h2>
+      <p>If you have any questions about this Privacy Policy, please contact us at:</p>
+      <p style="color:var(--teal)">arkeo.apps@gmail.com</p>
+    </div>
 
-    <h2>8. 문의</h2>
-    <p>개인정보처리방침에 관한 문의사항은 아래로 연락해 주세요.</p>
-    <p>이메일: <a href="mailto:arkeoapps@gmail.com">arkeoapps@gmail.com</a></p>
+    <div class="nav-links">
+      <a href="../">Arkeo Apps</a>
+      <a href="terms.html">Terms of Use</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="support.html">Support</a>
+    </div>
+
+    <div class="footer">
+      &copy; 2026 Arkeo Apps. All rights reserved.
+    </div>
+  </div>
 </body>
 </html>

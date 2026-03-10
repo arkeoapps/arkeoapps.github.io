@@ -1,28 +1,324 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arkeo Apps</title>
-    <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 600px; margin: 60px auto; padding: 0 20px; color: #333; }
-        h1 { font-size: 1.8em; }
-        a { color: #007AFF; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        .app { margin: 24px 0; padding: 16px; border: 1px solid #e0e0e0; border-radius: 12px; }
-        .app h2 { margin: 0 0 8px; font-size: 1.2em; }
-        .links a { margin-right: 16px; font-size: 0.9em; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arkeo Apps</title>
+  <style>
+    :root {
+      --bg: #111318;
+      --surface: #1A1D23;
+      --card: #23272F;
+      --teal: #5AC8C8;
+      --teal-dim: rgba(90,200,200,0.12);
+      --text: #E8EAED;
+      --muted: #9AA0A6;
+      --border: rgba(90,200,200,0.15);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+    .dot-grid {
+      position: fixed;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(90,200,200,0.04) 1px, transparent 1px);
+      background-size: 32px 32px;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 80px 24px;
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      margin-bottom: 72px;
+    }
+    .logo-mark {
+      width: 64px;
+      height: 64px;
+      background: var(--teal-dim);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+    .logo-mark svg { width: 32px; height: 32px; }
+    .hero h1 {
+      font-family: 'SF Pro Display', -apple-system, sans-serif;
+      font-size: 42px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 12px;
+    }
+    .hero h1 span { color: var(--teal); }
+    .hero .tagline {
+      font-size: 18px;
+      color: var(--muted);
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    /* Apps Grid */
+    .section-title {
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 24px;
+    }
+    .apps-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin-bottom: 72px;
+    }
+    .app-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 32px;
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+      transition: border-color 0.3s, transform 0.2s;
+      text-decoration: none;
+      color: inherit;
+    }
+    .app-card:hover {
+      border-color: var(--teal);
+      transform: translateY(-2px);
+    }
+    .app-card .app-icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 18px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      flex-shrink: 0;
+    }
+    .app-card .app-info { flex: 1; }
+    .app-card .app-name {
+      font-family: 'SF Pro Display', -apple-system, sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .app-card .app-subtitle {
+      font-size: 14px;
+      color: var(--teal);
+      margin-bottom: 12px;
+    }
+    .app-card .app-desc {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+    .app-card .app-links {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .app-card .app-links a {
+      font-size: 13px;
+      color: var(--teal);
+      text-decoration: none;
+      padding: 6px 14px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .app-card .app-links a:hover {
+      background: var(--teal-dim);
+      border-color: var(--teal);
+    }
+    .app-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 6px;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+    .badge-live {
+      background: rgba(90,200,200,0.15);
+      color: var(--teal);
+    }
+    .badge-soon {
+      background: rgba(255,180,80,0.15);
+      color: #FFB450;
+    }
+
+    /* Coming Soon Card */
+    .coming-soon-card {
+      background: var(--surface);
+      border: 1px dashed var(--border);
+      border-radius: 20px;
+      padding: 40px 32px;
+      text-align: center;
+    }
+    .coming-soon-card .cs-icon {
+      width: 56px;
+      height: 56px;
+      background: var(--teal-dim);
+      border-radius: 16px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+    .coming-soon-card h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .coming-soon-card p {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    /* About */
+    .about {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    .about h2 {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    .about p {
+      font-size: 15px;
+      color: var(--muted);
+      max-width: 520px;
+      margin: 0 auto 8px;
+    }
+    .about .email {
+      color: var(--teal);
+      font-size: 15px;
+      text-decoration: none;
+    }
+    .about .email:hover { text-decoration: underline; }
+
+    /* Footer */
+    .footer-links {
+      text-align: center;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+    }
+    .footer-links a {
+      color: var(--teal);
+      text-decoration: none;
+      font-size: 14px;
+      margin: 0 16px;
+      transition: opacity 0.2s;
+    }
+    .footer-links a:hover { opacity: 0.7; }
+    .footer {
+      text-align: center;
+      margin-top: 24px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 32px; }
+      .app-card { flex-direction: column; align-items: center; text-align: center; }
+      .app-card .app-links { justify-content: center; }
+    }
+  </style>
 </head>
 <body>
-    <h1>Arkeo Apps</h1>
-    <div class="app">
-        <h2>Till</h2>
-        <p>D-Day countdown & days-since tracking app</p>
-        <div class="links">
-            <a href="/till/terms">Terms of Use</a>
-            <a href="/till/privacy">Privacy Policy</a>
-        </div>
+  <div class="dot-grid"></div>
+  <div class="container">
+
+    <!-- Hero -->
+    <div class="hero">
+      <div class="logo-mark">
+        <svg viewBox="0 0 32 32" fill="none">
+          <circle cx="8" cy="8" r="2.5" fill="rgba(90,200,200,0.3)"/>
+          <circle cx="16" cy="8" r="2.5" fill="rgba(90,200,200,0.3)"/>
+          <circle cx="24" cy="8" r="2.5" fill="rgba(90,200,200,0.3)"/>
+          <circle cx="8" cy="16" r="2.5" fill="#5AC8C8"/>
+          <circle cx="16" cy="16" r="2.5" fill="#5AC8C8"/>
+          <circle cx="24" cy="16" r="2.5" fill="#5AC8C8"/>
+          <circle cx="8" cy="24" r="2.5" fill="rgba(90,200,200,0.3)"/>
+          <circle cx="16" cy="24" r="2.5" fill="rgba(90,200,200,0.3)"/>
+          <circle cx="24" cy="24" r="2.5" fill="rgba(90,200,200,0.3)"/>
+        </svg>
+      </div>
+      <h1>Arkeo <span>Apps</span></h1>
+      <p class="tagline">Thoughtfully crafted apps that bring clarity to your everyday moments.</p>
     </div>
+
+    <!-- Apps -->
+    <div class="section-title">Our Apps</div>
+    <div class="apps-grid">
+
+      <!-- Till -->
+      <div class="app-card">
+        <img src="app-icon.png" alt="Till" class="app-icon">
+        <div class="app-info">
+          <div class="app-name">Till <span class="app-badge badge-live">Live</span></div>
+          <div class="app-subtitle">D-Day Countdown Timeline</div>
+          <p class="app-desc">
+            Beautiful dot-grid timeline to count down to future events and track days since meaningful moments. Fluid S-curve visualization, widgets, themes, and multi-language support.
+          </p>
+          <div class="app-links">
+            <a href="till/privacy.html">Privacy</a>
+            <a href="till/terms.html">Terms</a>
+            <a href="till/support.html">Support</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coming Soon -->
+      <div class="coming-soon-card">
+        <div class="cs-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#5AC8C8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="12" y1="8" x2="12" y2="12"/>
+            <line x1="12" y1="16" x2="12.01" y2="16"/>
+          </svg>
+        </div>
+        <h3>More apps coming soon</h3>
+        <p>We're working on new apps to help you live more intentionally. Stay tuned.</p>
+      </div>
+
+    </div>
+
+    <!-- About -->
+    <div class="about">
+      <h2>About Arkeo Apps</h2>
+      <p>We build minimal, beautiful iOS apps focused on clarity and purposeful design. Every pixel serves a function.</p>
+      <p>&nbsp;</p>
+      <a href="mailto:arkeo.apps@gmail.com" class="email">arkeo.apps@gmail.com</a>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-links">
+      <a href="till/privacy.html">Privacy</a>
+      <a href="till/terms.html">Terms</a>
+      <a href="till/support.html">Support</a>
+    </div>
+    <div class="footer">
+      &copy; 2026 Arkeo Apps. All rights reserved.
+    </div>
+
+  </div>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Till - Terms of Use</title>
+  <title>Till - Support</title>
   <style>
     :root {
       --bg: #1A1D23;
@@ -78,19 +78,6 @@
       font-weight: 600;
       color: var(--teal);
       margin-bottom: 16px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .card h2 .icon {
-      width: 24px;
-      height: 24px;
-      background: var(--teal-dim);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 14px;
     }
     .card p, .card li {
       color: var(--muted);
@@ -99,9 +86,66 @@
     }
     .card ul {
       padding-left: 20px;
+      list-style: none;
     }
     .card li {
+      margin-bottom: 12px;
+      position: relative;
+      padding-left: 8px;
+    }
+    .card li::before {
+      content: '';
+      position: absolute;
+      left: -12px;
+      top: 10px;
+      width: 6px;
+      height: 6px;
+      background: var(--teal);
+      border-radius: 50%;
+    }
+    .contact-card {
+      background: var(--teal-dim);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .contact-card h2 {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+    .contact-card p {
+      color: var(--muted);
+      font-size: 15px;
+      margin-bottom: 16px;
+    }
+    .email-btn {
+      display: inline-block;
+      background: var(--teal);
+      color: var(--bg);
+      text-decoration: none;
+      padding: 12px 32px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 15px;
+      transition: opacity 0.2s;
+    }
+    .email-btn:hover { opacity: 0.85; }
+    .faq-q {
+      color: var(--text);
+      font-weight: 600;
+      font-size: 15px;
       margin-bottom: 8px;
+    }
+    .faq-a {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 20px;
+      padding-left: 16px;
+      border-left: 2px solid var(--border);
     }
     .nav-links {
       text-align: center;
@@ -131,71 +175,42 @@
     <div class="header">
       <img src="app-icon.png" alt="Till App Icon" class="app-icon">
       <div class="brand">Arkeo Apps</div>
-      <h1>Terms of Use</h1>
-      <p class="subtitle">Last updated: March 11, 2026</p>
+      <h1>Support</h1>
+      <p class="subtitle">We're here to help</p>
+    </div>
+
+    <div class="contact-card">
+      <h2>Need Help?</h2>
+      <p>Have a question, found a bug, or want to suggest a feature?<br>We'd love to hear from you.</p>
+      <a href="mailto:arkeo.apps@gmail.com?subject=Till%20Support" class="email-btn">Send Email</a>
     </div>
 
     <div class="card">
-      <h2><span class="icon">1</span> Acceptance of Terms</h2>
-      <p>By downloading, installing, or using Till ("the App"), you agree to be bound by these Terms of Use. If you do not agree, please do not use the App.</p>
+      <h2>FAQ</h2>
+
+      <p class="faq-q">Q. How do I create a new event?</p>
+      <p class="faq-a">Tap the + button on the top right of the Timeline or Events screen. Enter a title, choose a date and color, then tap Save.</p>
+
+      <p class="faq-q">Q. What is "Count days since" mode?</p>
+      <p class="faq-a">When enabled, the event counts up from a past date instead of counting down. Perfect for tracking anniversaries or milestones.</p>
+
+      <p class="faq-q">Q. What does Till Pro include?</p>
+      <p class="faq-a">Till Pro unlocks premium themes, additional footprint styles, and removes the event limit. It's a one-time purchase with no subscription.</p>
+
+      <p class="faq-q">Q. Is my data backed up?</p>
+      <p class="faq-a">Currently, all data is stored locally on your device. iCloud sync is planned for a future update. We recommend regular device backups via iCloud or iTunes.</p>
+
+      <p class="faq-q">Q. Can I use Till on iPad?</p>
+      <p class="faq-a">Yes! Till is fully optimized for both iPhone and iPad.</p>
     </div>
 
     <div class="card">
-      <h2><span class="icon">2</span> Description of Service</h2>
-      <p>Till is a countdown and days-since tracking application that allows you to:</p>
+      <h2>System Requirements</h2>
       <ul>
-        <li>Create and manage D-Day countdown events</li>
-        <li>Track elapsed days since past events</li>
-        <li>Visualize your timeline with a fluid dot-grid interface</li>
-        <li>Customize themes, categories, and widgets</li>
+        <li>iOS 18.0 or later</li>
+        <li>iPhone and iPad compatible</li>
+        <li>Approximately 15 MB of storage</li>
       </ul>
-    </div>
-
-    <div class="card">
-      <h2><span class="icon">3</span> User Responsibilities</h2>
-      <p>You are responsible for:</p>
-      <ul>
-        <li>Maintaining the security of your device</li>
-        <li>All content and data you create within the App</li>
-        <li>Backing up your data as needed</li>
-        <li>Using the App in compliance with applicable laws</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h2><span class="icon">4</span> In-App Purchases</h2>
-      <p>Till offers an optional "Till Pro" upgrade that unlocks premium themes, footprint styles, and additional features.</p>
-      <ul>
-        <li>Purchases are processed through Apple's App Store</li>
-        <li>All transactions are subject to Apple's terms and refund policies</li>
-        <li>Prices may vary by region and are displayed in your local currency</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h2><span class="icon">5</span> Intellectual Property</h2>
-      <p>All content, design, code, and visual elements of Till are the property of Arkeo Apps. You may not copy, modify, distribute, or reverse-engineer any part of the App.</p>
-    </div>
-
-    <div class="card">
-      <h2><span class="icon">6</span> Disclaimer of Warranties</h2>
-      <p>Till is provided "as is" without warranties of any kind, either express or implied. We do not guarantee that the App will be error-free or uninterrupted.</p>
-    </div>
-
-    <div class="card">
-      <h2><span class="icon">7</span> Limitation of Liability</h2>
-      <p>To the maximum extent permitted by law, Arkeo Apps shall not be liable for any indirect, incidental, or consequential damages arising from your use of the App.</p>
-    </div>
-
-    <div class="card">
-      <h2><span class="icon">8</span> Changes to Terms</h2>
-      <p>We reserve the right to modify these Terms at any time. Continued use of the App after changes constitutes acceptance of the updated Terms.</p>
-    </div>
-
-    <div class="card">
-      <h2><span class="icon">9</span> Contact Us</h2>
-      <p>For questions about these Terms, please contact us at:</p>
-      <p style="color:var(--teal)">arkeo.apps@gmail.com</p>
     </div>
 
     <div class="nav-links">
