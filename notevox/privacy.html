@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NoteVox - Privacy Policy</title>
+  <style>
+    :root {
+      --bg: #1A1D23;
+      --surface: #23272F;
+      --teal: #5AC8C8;
+      --teal-dim: rgba(90,200,200,0.15);
+      --text: #E8EAED;
+      --muted: #9AA0A6;
+      --border: rgba(90,200,200,0.2);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+    .dot-grid {
+      position: fixed;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(90,200,200,0.06) 1px, transparent 1px);
+      background-size: 32px 32px;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 60px 24px 80px;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .app-icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 18px;
+      box-shadow: 0 4px 24px rgba(90,200,200,0.2);
+      margin-bottom: 16px;
+    }
+    .brand {
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 8px;
+    }
+    h1 {
+      font-family: 'SF Pro Display', -apple-system, sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 20px;
+    }
+    .card h2 {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--teal);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .card h2 .icon {
+      width: 24px;
+      height: 24px;
+      background: var(--teal-dim);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+    }
+    .card p, .card li {
+      color: var(--muted);
+      font-size: 15px;
+      margin-bottom: 12px;
+    }
+    .card ul {
+      padding-left: 20px;
+    }
+    .card li {
+      margin-bottom: 8px;
+    }
+    .highlight {
+      background: var(--teal-dim);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin: 20px 0;
+      text-align: center;
+    }
+    .highlight p {
+      color: var(--teal);
+      font-weight: 600;
+      font-size: 16px;
+      margin: 0;
+    }
+    .nav-links {
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+    }
+    .nav-links a {
+      color: var(--teal);
+      text-decoration: none;
+      font-size: 14px;
+      margin: 0 16px;
+      transition: opacity 0.2s;
+    }
+    .nav-links a:hover { opacity: 0.7; }
+    .footer {
+      text-align: center;
+      margin-top: 32px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="dot-grid"></div>
+  <div class="container">
+    <div class="header">
+      <img src="app-icon.png" alt="NoteVox App Icon" class="app-icon">
+      <div class="brand">Arkeo Apps</div>
+      <h1>Privacy Policy</h1>
+      <p class="subtitle">Last updated: March 25, 2026</p>
+    </div>
+
+    <div class="highlight">
+      <p>NoteVox processes all audio on-device. We never collect, transmit, or store your data.</p>
+    </div>
+
+    <div class="card">
+      <h2><span class="icon">1</span> Information We Collect</h2>
+      <p>NoteVox is built with an offline-first, privacy-first architecture. We do <strong style="color:var(--text)">not</strong> collect any personal information.</p>
+      <ul>
+        <li>No account registration required</li>
+        <li>No analytics or tracking SDKs</li>
+        <li>No advertising identifiers</li>
+        <li>No server-side data storage or processing</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2><span class="icon">2</span> Audio & Transcription Data</h2>
+      <p>All audio recordings are stored <strong style="color:var(--text)">locally on your device</strong> in the app's sandboxed container.</p>
+      <p>Speech-to-text transcription is performed entirely on-device using WhisperKit, an on-device AI engine. <strong style="color:var(--text)">No audio data is ever sent to external servers.</strong></p>
+      <p>If you enable iCloud sync, your recordings and transcriptions are stored in your personal iCloud account under Apple's privacy policies. We never have access to your iCloud data.</p>
+    </div>
+
+    <div class="card">
+      <h2><span class="icon">3</span> Microphone Access</h2>
+      <p>NoteVox requires microphone access solely for recording audio. The microphone is only active when you explicitly start a recording. Audio data never leaves your device.</p>
+    </div>
+
+    <div class="card">
+      <h2><span class="icon">4</span> Third-Party Services</h2>
+      <p><strong style="color:var(--text)">WhisperKit:</strong> On-device speech recognition engine by Argmax. All processing is local — no data is sent to external servers.</p>
+      <p><strong style="color:var(--text)">Apple iCloud:</strong> Optional cloud sync through your personal Apple account, governed by Apple's privacy policy.</p>
+      <p>NoteVox does not integrate any third-party analytics, advertising, or data collection services.</p>
+    </div>
+
+    <div class="card">
+      <h2><span class="icon">5</span> Children's Privacy</h2>
+      <p>NoteVox does not knowingly collect any information from children. The app is safe for users of all ages.</p>
+    </div>
+
+    <div class="card">
+      <h2><span class="icon">6</span> Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time. Any changes will be reflected on this page with an updated revision date.</p>
+    </div>
+
+    <div class="card">
+      <h2><span class="icon">7</span> Contact Us</h2>
+      <p>If you have any questions about this Privacy Policy, please contact us at:</p>
+      <p style="color:var(--teal)">arkeo.apps@gmail.com</p>
+    </div>
+
+    <div class="nav-links">
+      <a href="../">Arkeo Apps</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="support.html">Support</a>
+    </div>
+
+    <div class="footer">
+      &copy; 2026 Arkeo Apps. All rights reserved.
+    </div>
+  </div>
+</body>
+</html>
