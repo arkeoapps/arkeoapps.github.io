@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>APP_NAME - Privacy Policy</title>
+  <style>
+    :root {
+      --bg: #1A1D23;
+      --surface: #23272F;
+      --teal: #5AC8C8;
+      --teal-dim: rgba(90,200,200,0.15);
+      --text: #E8EAED;
+      --muted: #9AA0A6;
+      --border: rgba(90,200,200,0.2);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+    .dot-grid {
+      position: fixed;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(90,200,200,0.06) 1px, transparent 1px);
+      background-size: 32px 32px;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 60px 24px 80px;
+    }
+    .header { text-align: center; margin-bottom: 48px; }
+    .app-icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 18px;
+      box-shadow: 0 4px 24px rgba(90,200,200,0.2);
+      margin-bottom: 16px;
+    }
+    .brand { font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: var(--teal); margin-bottom: 8px; }
+    h1 { font-family: 'SF Pro Display', -apple-system, sans-serif; font-size: 32px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+    .subtitle { color: var(--muted); font-size: 14px; }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 32px; margin-bottom: 20px; }
+    .card h2 { font-size: 18px; font-weight: 600; color: var(--teal); margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+    .card h2 .icon { width: 24px; height: 24px; background: var(--teal-dim); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; }
+    .card p, .card li { color: var(--muted); font-size: 15px; margin-bottom: 12px; }
+    .card ul { padding-left: 20px; }
+    .card li { margin-bottom: 8px; }
+    .highlight { background: var(--teal-dim); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin: 20px 0; text-align: center; }
+    .highlight p { color: var(--teal); font-weight: 600; font-size: 16px; margin: 0; }
+    .nav-links { text-align: center; margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--border); }
+    .nav-links a { color: var(--teal); text-decoration: none; font-size: 14px; margin: 0 16px; transition: opacity 0.2s; }
+    .nav-links a:hover { opacity: 0.7; }
+    .footer { text-align: center; margin-top: 32px; color: var(--muted); font-size: 12px; }
+  </style>
+</head>
+<body>
+  <div class="dot-grid"></div>
+  <div class="container">
+    <div class="header">
+      <!-- Replace app-icon.png with actual app icon -->
+      <img src="app-icon.png" alt="APP_NAME App Icon" class="app-icon">
+      <div class="brand">Arkeo Apps</div>
+      <h1>Privacy Policy</h1>
+      <p class="subtitle">Last updated: MONTH DD, YYYY</p>
+    </div>
+
+    <!-- Customize the headline to match your app's privacy story -->
+    <div class="highlight">
+      <p>APP_NAME does not collect, transmit, or store your personal data.</p>
+    </div>
+
+    <div class="card">
+      <h2><span class="icon">1</span> Information We Collect</h2>
+      <p>APP_NAME does <strong style="color:var(--text)">not</strong> collect any personal information.</p>
+      <ul>
+        <li>No account registration required</li>
+        <li>No analytics or tracking SDKs</li>
+        <li>No advertising identifiers</li>
+        <li>No server-side data storage</li>
+      </ul>
+    </div>
+
+    <!-- Add/remove/edit sections to match your app's actual data practices -->
+
+    <div class="card">
+      <h2><span class="icon">2</span> Data Storage</h2>
+      <p>All data is stored <strong style="color:var(--text)">locally on your device</strong> using Apple's frameworks.</p>
+      <p>If you enable iCloud sync, data is stored in your personal iCloud account under Apple's privacy policies. We never have access to your iCloud data.</p>
+    </div>
+
+    <div class="card">
+      <h2><span class="icon">3</span> Third-Party Services</h2>
+      <p>APP_NAME does not integrate any third-party analytics, advertising, or data collection services.</p>
+    </div>
+
+    <div class="card">
+      <h2><span class="icon">4</span> Children's Privacy</h2>
+      <p>APP_NAME does not knowingly collect any information from children. The app is safe for users of all ages.</p>
+    </div>
+
+    <div class="card">
+      <h2><span class="icon">5</span> Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time. Any changes will be reflected on this page with an updated revision date.</p>
+    </div>
+
+    <div class="card">
+      <h2><span class="icon">6</span> Contact Us</h2>
+      <p>If you have any questions about this Privacy Policy, please contact us at:</p>
+      <p style="color:var(--teal)"><a href="mailto:arkeo@icloud.com" style="color:var(--teal)">arkeo@icloud.com</a></p>
+    </div>
+
+    <div class="nav-links">
+      <a href="../../">Arkeo Apps</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="support.html">Support</a>
+    </div>
+
+    <div class="footer">
+      &copy; 2026 Arkeo Apps. All rights reserved.
+    </div>
+  </div>
+</body>
+</html>
