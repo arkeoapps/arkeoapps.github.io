@@ -8,11 +8,11 @@
     :root {
       --bg: #1A1D23;
       --surface: #23272F;
-      --teal: #5AC8C8;
-      --teal-dim: rgba(90,200,200,0.15);
+      --amber: #EFB358;
+      --amber-dim: rgba(239,179,88,0.15);
       --text: #E8EAED;
       --muted: #9AA0A6;
-      --border: rgba(90,200,200,0.2);
+      --border: rgba(239,179,88,0.2);
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -25,7 +25,7 @@
     .dot-grid {
       position: fixed;
       inset: 0;
-      background-image: radial-gradient(circle, rgba(90,200,200,0.06) 1px, transparent 1px);
+      background-image: radial-gradient(circle, rgba(239,179,88,0.06) 1px, transparent 1px);
       background-size: 32px 32px;
       pointer-events: none;
       z-index: 0;
@@ -45,14 +45,14 @@
       width: 80px;
       height: 80px;
       border-radius: 18px;
-      box-shadow: 0 4px 24px rgba(90,200,200,0.2);
+      box-shadow: 0 4px 24px rgba(239,179,88,0.2);
       margin-bottom: 16px;
     }
     .brand {
       font-size: 13px;
       letter-spacing: 2px;
       text-transform: uppercase;
-      color: var(--teal);
+      color: var(--amber);
       margin-bottom: 8px;
     }
     h1 {
@@ -76,7 +76,7 @@
     .card h2 {
       font-size: 18px;
       font-weight: 600;
-      color: var(--teal);
+      color: var(--amber);
       margin-bottom: 16px;
       display: flex;
       align-items: center;
@@ -85,7 +85,7 @@
     .card h2 .icon {
       width: 24px;
       height: 24px;
-      background: var(--teal-dim);
+      background: var(--amber-dim);
       border-radius: 8px;
       display: flex;
       align-items: center;
@@ -104,7 +104,7 @@
       margin-bottom: 8px;
     }
     .highlight {
-      background: var(--teal-dim);
+      background: var(--amber-dim);
       border: 1px solid var(--border);
       border-radius: 12px;
       padding: 20px 24px;
@@ -112,7 +112,7 @@
       text-align: center;
     }
     .highlight p {
-      color: var(--teal);
+      color: var(--amber);
       font-weight: 600;
       font-size: 16px;
       margin: 0;
@@ -124,7 +124,7 @@
       border-top: 1px solid var(--border);
     }
     .nav-links a {
-      color: var(--teal);
+      color: var(--amber);
       text-decoration: none;
       font-size: 14px;
       margin: 0 16px;
@@ -184,7 +184,7 @@
     <div class="card">
       <h2><span class="icon">5</span> Third-Party Services</h2>
       <p><strong style="color:var(--text)">WhisperKit:</strong> On-device speech recognition engine by Argmax, based on OpenAI Whisper. All processing is local — no data is sent to external servers.</p>
-      <p><strong style="color:var(--text)">Apple iCloud (CloudKit):</strong> Optional cloud sync through your personal Apple account, governed by Apple's <a href="https://www.apple.com/legal/privacy/" style="color:var(--teal)">Privacy Policy</a>.</p>
+      <p><strong style="color:var(--text)">Apple iCloud (CloudKit):</strong> Optional cloud sync through your personal Apple account, governed by Apple's <a href="https://www.apple.com/legal/privacy/" style="color:var(--amber)">Privacy Policy</a>.</p>
       <p>NoteVox does not integrate any third-party analytics, advertising, or data collection services.</p>
     </div>
 
@@ -206,7 +206,7 @@
     <div class="card">
       <h2><span class="icon">9</span> Contact Us</h2>
       <p>If you have any questions about this Privacy Policy, please contact us at:</p>
-      <p style="color:var(--teal)"><a href="mailto:arkeo@icloud.com" style="color:var(--teal)">arkeo@icloud.com</a></p>
+      <p style="color:var(--amber)"><a href="mailto:arkeo@icloud.com" style="color:var(--amber)">arkeo@icloud.com</a></p>
     </div>
 
     <div class="nav-links">

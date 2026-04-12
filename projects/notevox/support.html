@@ -8,11 +8,11 @@
     :root {
       --bg: #1A1D23;
       --surface: #23272F;
-      --teal: #5AC8C8;
-      --teal-dim: rgba(90,200,200,0.15);
+      --amber: #EFB358;
+      --amber-dim: rgba(239,179,88,0.15);
       --text: #E8EAED;
       --muted: #9AA0A6;
-      --border: rgba(90,200,200,0.2);
+      --border: rgba(239,179,88,0.2);
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -25,7 +25,7 @@
     .dot-grid {
       position: fixed;
       inset: 0;
-      background-image: radial-gradient(circle, rgba(90,200,200,0.06) 1px, transparent 1px);
+      background-image: radial-gradient(circle, rgba(239,179,88,0.06) 1px, transparent 1px);
       background-size: 32px 32px;
       pointer-events: none;
       z-index: 0;
@@ -45,14 +45,14 @@
       width: 80px;
       height: 80px;
       border-radius: 18px;
-      box-shadow: 0 4px 24px rgba(90,200,200,0.2);
+      box-shadow: 0 4px 24px rgba(239,179,88,0.2);
       margin-bottom: 16px;
     }
     .brand {
       font-size: 13px;
       letter-spacing: 2px;
       text-transform: uppercase;
-      color: var(--teal);
+      color: var(--amber);
       margin-bottom: 8px;
     }
     h1 {
@@ -76,7 +76,7 @@
     .card h2 {
       font-size: 18px;
       font-weight: 600;
-      color: var(--teal);
+      color: var(--amber);
       margin-bottom: 16px;
     }
     .card p, .card li {
@@ -100,11 +100,11 @@
       top: 10px;
       width: 6px;
       height: 6px;
-      background: var(--teal);
+      background: var(--amber);
       border-radius: 50%;
     }
     .contact-card {
-      background: var(--teal-dim);
+      background: var(--amber-dim);
       border: 1px solid var(--border);
       border-radius: 16px;
       padding: 32px;
@@ -124,7 +124,7 @@
     }
     .email-btn {
       display: inline-block;
-      background: var(--teal);
+      background: var(--amber);
       color: var(--bg);
       text-decoration: none;
       padding: 12px 32px;
@@ -154,7 +154,7 @@
       border-top: 1px solid var(--border);
     }
     .nav-links a {
-      color: var(--teal);
+      color: var(--amber);
       text-decoration: none;
       font-size: 14px;
       margin: 0 16px;
@@ -198,7 +198,7 @@
       <p class="faq-a">With iCloud enabled, your recording metadata (titles, timestamps, tags, and transcripts) automatically syncs across your Apple devices. Raw audio files stay on each device. All synced data is encrypted and stored in your personal iCloud account.</p>
 
       <p class="faq-q">Q. Is my audio data private?</p>
-      <p class="faq-a">Yes. All audio processing happens on your device. We never collect, transmit, or store your audio recordings or transcriptions on any server. See our <a href="privacy.html" style="color:var(--teal)">Privacy Policy</a> for details.</p>
+      <p class="faq-a">Yes. All audio processing happens on your device. We never collect, transmit, or store your audio recordings or transcriptions on any server. See our <a href="privacy.html" style="color:var(--amber)">Privacy Policy</a> for details.</p>
 
       <p class="faq-q">Q. Can I import audio files from other apps?</p>
       <p class="faq-a">Yes. NoteVox supports Share Extension — you can send audio files from Files, Voice Memos, or any other app directly to NoteVox for transcription.</p>

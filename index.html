@@ -14,6 +14,9 @@
       --text: #E8EAED;
       --muted: #9AA0A6;
       --border: rgba(90,200,200,0.15);
+      --amber: #EFB358;
+      --amber-dim: rgba(239,179,88,0.12);
+      --amber-border: rgba(239,179,88,0.15);
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -162,6 +165,21 @@
       background: rgba(255,180,80,0.15);
       color: #FFB450;
     }
+    /* NoteVox — amber accent override */
+    .app-card--amber:hover {
+      border-color: var(--amber);
+    }
+    .app-card--amber .app-subtitle {
+      color: var(--amber);
+    }
+    .app-card--amber .app-links a {
+      color: var(--amber);
+      border-color: var(--amber-border);
+    }
+    .app-card--amber .app-links a:hover {
+      background: var(--amber-dim);
+      border-color: var(--amber);
+    }
 
     /* Coming Soon Card */
     .coming-soon-card {
@@ -288,7 +306,7 @@
       </div>
 
       <!-- NoteVox -->
-      <div class="app-card">
+      <div class="app-card app-card--amber">
         <img src="notevox/app-icon.png" alt="NoteVox" class="app-icon">
         <div class="app-info">
           <div class="app-name">NoteVox <span class="app-badge badge-soon">Coming Soon</span></div>
