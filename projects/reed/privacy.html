@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reed - Privacy Policy</title>
+  <style>
+    :root {
+      --bg: #1A1D23;
+      --surface: #23272F;
+      --accent: #EFB358;
+      --accent-dim: rgba(239,179,88,0.15);
+      --text: #E8EAED;
+      --muted: #9AA0A6;
+      --border: rgba(239,179,88,0.2);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+    .dot-grid {
+      position: fixed;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(239,179,88,0.06) 1px, transparent 1px);
+      background-size: 32px 32px;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .container { position: relative; z-index: 1; max-width: 680px; margin: 0 auto; padding: 60px 24px 80px; }
+    .header { text-align: center; margin-bottom: 48px; }
+    .app-icon { width: 80px; height: 80px; border-radius: 18px; box-shadow: 0 4px 24px rgba(239,179,88,0.2); margin-bottom: 16px; }
+    .brand { font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+    h1 { font-family: 'SF Pro Display', -apple-system, sans-serif; font-size: 32px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+    .subtitle { color: var(--muted); font-size: 14px; }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 32px; margin-bottom: 20px; }
+    .card h2 { font-size: 18px; font-weight: 600; color: var(--accent); margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+    .card h2 .icon { width: 24px; height: 24px; background: var(--accent-dim); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; }
+    .card p, .card li { color: var(--muted); font-size: 15px; margin-bottom: 12px; }
+    .card ul { padding-left: 20px; }
+    .card li { margin-bottom: 8px; }
+    .card a { color: var(--accent); }
+    .highlight { background: var(--accent-dim); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin: 20px 0; text-align: center; }
+    .highlight p { color: var(--accent); font-weight: 600; font-size: 16px; margin: 0; }
+    .nav-links { text-align: center; margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--border); }
+    .nav-links a { color: var(--accent); text-decoration: none; font-size: 14px; margin: 0 16px; transition: opacity 0.2s; }
+    .nav-links a:hover { opacity: 0.7; }
+    .footer { text-align: center; margin-top: 32px; color: var(--muted); font-size: 12px; }
+  </style>
+</head>
+<body>
+  <div class="dot-grid"></div>
+  <div class="container">
+    <div class="header">
+      <img src="app-icon.png" alt="Reed App Icon" class="app-icon">
+      <div class="brand">Arkeo Apps</div>
+      <h1>Privacy Policy</h1>
+      <p class="subtitle">Last updated: June 28, 2026</p>
+    </div>
+
+    <div class="highlight">
+      <p>Your library and reading progress stay on your device and in your own iCloud. Reed shows ads and uses analytics to keep the app free and improve it.</p>
+    </div>
+
+    <div class="card">
+      <h2><span class="icon">1</span> Information We Collect</h2>
+      <p>Reed has no accounts and never asks for your name, email, or contacts. Your books and reading data are not sent to us.</p>
+      <p>To keep the app free and reliable, Reed uses third-party SDKs that collect limited information on their own:</p>
+      <ul>
+        <li><strong style="color:var(--text)">Google AdMob</strong> (ads): advertising identifier (IDFA), device information, approximate location, and ad interactions — used to serve and measure ads.</li>
+        <li><strong style="color:var(--text)">Google Firebase Analytics</strong>: anonymous usage data and an app-instance identifier — used to understand how features are used.</li>
+        <li><strong style="color:var(--text)">Firebase Crashlytics</strong>: crash logs and device state at the time of a crash — used to diagnose and fix bugs.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2><span class="icon">2</span> Your Books &amp; Reading Data</h2>
+      <p>Imported books, reading progress, bookmarks, and settings are stored <strong style="color:var(--text)">locally on your device</strong> using Apple's frameworks.</p>
+      <p>If you enable iCloud sync, this data is stored in <strong style="color:var(--text)">your personal iCloud account</strong> (Apple CloudKit) and synced across your devices under Apple's privacy policy. We never have access to your iCloud data.</p>
+    </div>
+
+    <div class="card">
+      <h2><span class="icon">3</span> Third-Party Services</h2>
+      <p>Reed integrates the following Google services. Their handling of data is governed by Google's privacy policy:</p>
+      <ul>
+        <li>Google AdMob &amp; Firebase — <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2><span class="icon">4</span> Tracking &amp; Your Choices</h2>
+      <p>On first launch Reed asks for permission via Apple's <strong style="color:var(--text)">App Tracking Transparency</strong>. If you decline, ads become non-personalized.</p>
+      <p>You can buy the <strong style="color:var(--text)">Remove Ads</strong> in-app purchase to turn off ads entirely. You can also change tracking permission anytime in iOS Settings &rsaquo; Privacy &amp; Security &rsaquo; Tracking.</p>
+    </div>
+
+    <div class="card">
+      <h2><span class="icon">5</span> Children's Privacy</h2>
+      <p>Reed is not directed at children under 13 and does not knowingly collect personal information from them.</p>
+    </div>
+
+    <div class="card">
+      <h2><span class="icon">6</span> Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time. Any changes will be reflected on this page with an updated revision date.</p>
+    </div>
+
+    <div class="card">
+      <h2><span class="icon">7</span> Contact Us</h2>
+      <p>If you have any questions about this Privacy Policy, please contact us at:</p>
+      <p><a href="mailto:arkeo.apps@gmail.com">arkeo.apps@gmail.com</a></p>
+    </div>
+
+    <div class="nav-links">
+      <a href="../../">Arkeo Apps</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="support.html">Support</a>
+    </div>
+
+    <div class="footer">
+      &copy; 2026 Arkeo Apps. All rights reserved.
+    </div>
+  </div>
+</body>
+</html>
